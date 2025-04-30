@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+	int numbers = 0;
+	int pairNumbers = 0;
+	int oddNumbers = 0;
+	int divisableFiveNumbers = 0;
+	while (1)
+	{
+		printf("Type a number\n");
+		int number;
+		scanf("%d", &number);
+
+		numbers++;
+
+		if (number % 2 == 0)
+		{
+			pairNumbers++;
+		}
+		else
+		{
+			oddNumbers++;
+		}
+
+		if (number % 5 == 0)
+		{
+			divisableFiveNumbers++;
+		}
+
+		int signal;
+		printf("Do you wish to continue? 1 for yes 0 for no\n");
+		scanf("%d", &signal);
+
+		if (signal == 0)
+		{
+			break;
+		}
+	}
+
+	printf("amount numbers = %d, pairs = %d, odds = %d, divisable by 5 = %d", numbers, pairNumbers, oddNumbers, divisableFiveNumbers);
+}

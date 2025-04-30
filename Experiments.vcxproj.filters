@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="exercises1">
+      <UniqueIdentifier>{E1B331D4-CD6B-7321-3673-4C7D224A0E12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="exercises2">
+      <UniqueIdentifier>{E2B331D4-CE6B-7321-3773-4C7D234A0E12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="exercises3">
+      <UniqueIdentifier>{E3B331D4-CF6B-7321-3873-4C7D244A0E12}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\exercises1\exercise1.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises1\exercise10.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises1\exercise2.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises1\exercise3.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises1\exercise4.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises1\exercise5.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises1\exercise6.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises1\exercise7.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises1\exercise8.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises1\exercise9.h">
+      <Filter>exercises1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise1.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise10.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise11.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise12.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise13.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise14.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise2.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise3.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise4.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise5.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise6.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise7.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise8.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises2\exercise9.h">
+      <Filter>exercises2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises3\exercise1.h">
+      <Filter>exercises3</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises3\exercise2.h">
+      <Filter>exercises3</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises3\exercise3.h">
+      <Filter>exercises3</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises3\exercise4.h">
+      <Filter>exercises3</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises3\exercise5.h">
+      <Filter>exercises3</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises3\exercise6.h">
+      <Filter>exercises3</Filter>
+    </ClInclude>
+    <ClInclude Include="src\experiments.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.c" />
+  </ItemGroup>
+</Project>
