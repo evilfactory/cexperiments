@@ -10,17 +10,14 @@ int main()
 	int termo = 0;
 	scanf("%d", &termo);
 
-	printf("1\n");
-
-	int num1 = 1;
-	int num2 = 0;
+	int num1 = 0;
+	int num2 = 1;
 	int result = 1;
 	for (int i = 0; i < termo; i++)
 	{
 		result = num1 + num2;
 		num2 = num1;
 		num1 = result;
-		
-		printf("%d\n", result);
 	}
+	printf("%d ", result);
 }

@@ -1,58 +1,48 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 
-int digit_sum(int x)
-{
-	int sum = 0;
-	while (1)
-	{
-		sum = sum + x % 10;
-		x = x / 10;
-
-		if (x == 0)
-		{
-			return sum;
-		}
-	}
-}
-
-int is_magico(int x)
-{
-	while (1)
-	{
-		x = digit_sum(x);
-		if (x < 10)
-		{
-			if (x == 1)
-			{
-				return 1;
-			}
-			else
-			{
-				return 0;
-			}
-		}
-	}
-}
+// Fazer um programa para informar se um numero digitado pelo usuário é um número mágico.
+// Um número é considerado mágico se, ao somar seus dígitos repetidamente até restar apenas um dígito, o resultado final for 1.
+// Exemplo:
+// 19 → 1 + 9 = 10 → 1 + 0 = 1 (Mágico ✅)
+// 1234 → 1 + 2 + 3 + 4 = 10 → 1 + 0 = 1 (Mágico ✅)
+// 20 → 2 + 0 = 2 (Não mágico ❌)
 
 int main()
 {
-	int x;
-	scanf("%d", &x);
+    int num;
+    printf("Number: \n");
+    scanf("%d", &num);
 
-	while (1)
-	{
-		x = digit_sum(x);
-		if (x < 10)
-		{
-			if (x == 1)
-			{
-				printf("es magico\n");
-			}
-			else
-			{
-				printf("es nao magico\n");
-			}
-			break;
-		}
-	}
+    int operating = num;
+    while (1)
+    {
+        int sum = 0;
+        while (1)
+        {
+            int digit = operating % 10;
+            operating = operating / 10;
+            sum = sum + digit;
+
+            if (operating == 0)
+            {
+                break;
+            }
+        }
+
+        operating = sum;
+
+        if (operating < 10)
+        {
+            if (operating == 1)
+            {
+                printf("%d is magic", num);
+            }
+            else
+            {
+                printf("%d is not magic", num);
+            }
+
+            break;
+        }
+    }
 }

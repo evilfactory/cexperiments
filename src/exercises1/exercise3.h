@@ -23,14 +23,24 @@ int main()
 {
 	int start = 0;
 	int end = 0;
+	printf("start: \n");
 	scanf("%d", &start);
+	printf("end: \n");
 	scanf("%d", &end);
 
-	for (int i = start; i <= end; i++)
+	for (int num = start; num <= end; num++)
 	{
-		if (is_prime(i))
+		int isPrime = 1;
+		for (int i = 2; i < num; i++)
 		{
-			printf("%d is prime\n", i);
+			if (num % i == 0)
+			{
+				isPrime = 0;
+			}
+		}
+		if (isPrime)
+		{
+			printf("%d is prime\n", num);
 		}
 	}
 }

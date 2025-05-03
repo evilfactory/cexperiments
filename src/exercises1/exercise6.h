@@ -4,16 +4,26 @@
 int main()
 {
 	int start = 0;
+	printf("start: \n");
 	scanf("%d", &start);
-
 	int end = 0;
+	printf("end: \n");
 	scanf("%d", &end);
 	
-	for (int i = start; i <= end; i++)
+	for (int num = start; num <= end; num++)
 	{
-		if (is_perfect(i))
+		int sum = 0;
+		for (int i = 1; i < num; i++)
 		{
-			printf("%d is perfect\n", i);
+			if (num % i == 0)
+			{
+				sum = sum + i;
+			}
+		}
+
+		if (sum == num)
+		{
+			printf("%d is perfect\n", num);
 		}
 	}
 }

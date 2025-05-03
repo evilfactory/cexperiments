@@ -8,39 +8,37 @@ int main()
 	scanf("%d", &num);
 
 	int nPrimes = 0;
-	int primes[10];
+	int n1;
+	int n2;
 
-	for (int i = num - 1; i > 0; i--)
+	if (num == 2) 
 	{
-		if (num % i == 0 && is_prime(i))
+		n1 = 2;
+		n2 = 2;
+		nPrimes = 2;
+	}
+	else 
+	{
+		for (int i = num - 1; i > 1; i--)
 		{
-			printf("%d is prime from %d\n", i, num);
-			primes[nPrimes] = i;
-			nPrimes++;
+			if (num % i == 0)
+			{
+				printf("%d is prime from %d\n", i, num);
+
+				if (nPrimes == 0) { n1 = i; }
+				if (nPrimes == 1) { n2 = i; }
+
+				nPrimes++;
+			}
 		}
 	}
 
 	if (nPrimes == 2)
 	{
-		printf("the number %d can be written as %d*%d\n", num, primes[0], primes[1]);
+		printf("the number %d can be written as %d*%d\n", num, n1, n2);
 	}
 	else 
 	{
 		printf("the number %d can't be written as two prime numbers\n", num);
 	}
-}
-
-int is_perfect(int x)
-{
-	int result = 0;
-
-	for (int i = x; i > 0; i--)
-	{
-		if (x % i == 0 && i != x)
-		{
-			result = result + i;
-		}
-	}
-
-	return x == result;
 }

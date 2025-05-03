@@ -1,20 +1,5 @@
 #include <stdio.h>
 
-int is_perfect(int x)
-{
-	int result = 0;
-
-	for (int i = x; i > 0; i--)
-	{
-		if (x % i == 0 && i != x)
-		{
-			result = result + i;
-		}
-	}
-
-	return x == result;
-}
-
 // Fazer um programa C para informar se um dado número digitado pelo usuário é um número perfeito.
 // Dizemos que um número natural é perfeito se é igual à soma de todos os seus fatores(divisores), 
 // excluindo ele próprio.Por exemplo, 6 e 28 são números perfeitos, 
@@ -24,7 +9,16 @@ int main()
 	int x = 0;
 	scanf("%d", &x);
 
-	if (is_perfect(x))
+	int sum = 0;
+	for (int i = 1; i < x; i++)
+	{
+		if (x % i == 0)
+		{
+			sum = sum + i;
+		}
+	}
+
+	if (sum == x)
 	{
 		printf(" is perfect\n");
 	}
