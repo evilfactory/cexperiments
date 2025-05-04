@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+// Exercício 12: Fazer um programa C, onde dois números são amigos se a soma dos divisores
+// próprios de um é igual ao outro, e vice - versa.Escreva um programa que verifique se dois
+// números são amigos.
 int main()
 {
 	int num1 = 0;

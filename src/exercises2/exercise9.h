@@ -1,44 +1,46 @@
 #include <stdio.h>
+#include <math.h>
 
+// Exercício 9: Fazer um programa que leia um número inteiro e verifique se ele é o mesmo quando
+// invertido.
 int main()
 {
 	int number = 0;
 	scanf("%d", &number);
 
-	int operating = number;
-	int result = 0;
-	int casa = 1;
-
+	int aux = number;
+	int numDigits = 0;
 	while (1)
 	{
-		if (number / casa == 0)
-		{
-			break;
-		}
-
-		casa = casa * 10;
-	}
-
-	while (1)
-	{
-		int remainder = operating % 10;
-		operating = operating / 10;
-
-		casa = casa / 10;
-		result = result + remainder * casa;
-
-		if (operating == 0)
+		aux = aux / 10;
+		numDigits++;
+		if (aux == 0)
 		{
 			break;
 		}
 	}
 
-	if (result == number)
+	int reversedNumber = 0;
+	aux = number;
+	while (1)
 	{
-		printf("%d == %d", result, number);
+		int lastDigit = aux % 10;
+		reversedNumber = reversedNumber + lastDigit * pow(10, numDigits - 1);
+		aux = aux / 10;
+		numDigits--;
+
+		if (numDigits == 0)
+		{
+			break;
+		}
+	}
+
+	if (reversedNumber == number)
+	{
+		printf("%d == %d\n", number, reversedNumber);
 	}
 	else
 	{
-		printf("%d != %d", result, number);
+		printf("%d != %d\n", number, reversedNumber);
 	}
 }

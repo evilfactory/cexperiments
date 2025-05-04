@@ -1,28 +1,31 @@
 #include <stdio.h>
 
+// Exercício 11: Fazer um programa que leia um número decimal e o converta para binário.
 int main()
 {
-	int number = 0;
-	int binary = 0;
+    int num;
+    scanf("%d", &num);
 
-	scanf("%d", &number);
+    int binary = 0;
+    int house = 1;
 
-	int casa = 1;
+    while (1)
+    {
+        int modulos = num % 2;
+        if (modulos == 1)
+        {
+            binary = binary + house * 1;
+        }
 
-	while (1)
-	{
-		int remainder = number % 2;
-		number = number / 2;
+        house = house * 10;
 
-		binary = binary + remainder * casa;
-	
-		casa = casa * 10;
+        if (num == 0)
+        {
+            break;
+        }
 
-		if (number == 0)
-		{
-			break;
-		}
-	}
-
-	printf("%d", binary);
+        num = num / 2;
+    }
+    
+    printf("%d\n", binary);
 }

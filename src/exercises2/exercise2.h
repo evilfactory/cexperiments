@@ -1,29 +1,24 @@
 #include <stdio.h>
 
-char is_perfect_square(int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		if (i * i == n)
-		{
-			return 1;
-		}
-	}
-
-	return 0;
-}
-
+// Exercício 2: Fazer um programa C para imprimir todos os números, dentro de um intervalo definido pelo usuário, 
+// que tenham a raiz quadrada exata, ou seja, sem casas decimais.
 int main()
 {
 	int min, max;
+	printf("min: \n");
 	scanf("%d", &min);
+	printf("max: \n");
 	scanf("%d", &max);
 
-	for (int i = min; i < max; i++)
+	for (int num = min; num <= max; num++)
 	{
-		if (is_perfect_square(i))
+		for (int i = 0; i < num; i++)
 		{
-			printf("%d ", i);
+			if (i * i == num)
+			{
+				printf("%d is perfect\n", num);
+				break;
+			}
 		}
 	}
 }

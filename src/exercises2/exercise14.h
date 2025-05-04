@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Exercício 14: Fazer um programa que leia dois números inteiros A e B e conte quantos números
+// ímpares existem entre eles.
 int main()
 {
 	int x, y;

@@ -1,42 +1,46 @@
 #include <stdio.h>
 
+// Exercício 7: Fazer um programa C para que o usuário digite um conjunto de números. Após cada
+// número digitado, o programa deve perguntar se ele deseja digitar outros números.Quando
+// terminar, o programa deve mostrar quantos números foram digitados, quantos foram números
+// pares e quantos foram números ímpares e quantos destes números eram divisíveis por 5.
 int main()
 {
-	int numbers = 0;
-	int pairNumbers = 0;
-	int oddNumbers = 0;
-	int divisableFiveNumbers = 0;
-	while (1)
-	{
-		printf("Type a number\n");
-		int number;
-		scanf("%d", &number);
+    int amount = 0;
+    int pairs = 0;
+    int impairs = 0;
+    int divisablesByFive = 0;
 
-		numbers++;
+    while (1)
+    {
+        int num;
+        printf("Type a number: \n");
+        scanf("%d", &num);
 
-		if (number % 2 == 0)
-		{
-			pairNumbers++;
-		}
-		else
-		{
-			oddNumbers++;
-		}
+        amount = amount + 1;
 
-		if (number % 5 == 0)
-		{
-			divisableFiveNumbers++;
-		}
+        if (num % 5 == 0)
+        {
+            divisablesByFive++;
+        }
 
-		int signal;
-		printf("Do you wish to continue? 1 for yes 0 for no\n");
-		scanf("%d", &signal);
+        if (num % 2 == 0)
+        {
+            pairs++;
+        }
+        else
+        {
+            impairs++;
+        }
 
-		if (signal == 0)
-		{
-			break;
-		}
-	}
+        char option;
+        printf("Do you wish to continue? (y/n)\n");
+        scanf(" %c", &option);
+        if (option != 'y')
+        {
+            break;
+        }
+    }
 
-	printf("amount numbers = %d, pairs = %d, odds = %d, divisable by 5 = %d", numbers, pairNumbers, oddNumbers, divisableFiveNumbers);
+    printf("Numbers = %d, pairs = %d, impairs = %d, divisable by 5 = %d", amount, pairs, impairs, divisablesByFive);
 }

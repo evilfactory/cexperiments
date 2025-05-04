@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Exercício 13: Fazer um programa que leia dois números inteiros, mostre o maior e a diferença
+// entre eles.
 int main()
 {
 	int x, y;
@@ -10,12 +12,12 @@ int main()
 
 	if (x > y)
 	{
-		printf("maior = %d\n", x);
+		printf("max = %d\n", x);
 		printf("diff = %d", x - y);
 	}
 	else
 	{
-		printf("maior = %d\n", y);
+		printf("max = %d\n", y);
 		printf("diff = %d", y - x);
 	}
 }

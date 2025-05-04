@@ -1,37 +1,34 @@
 #include <stdio.h>
 
+// Exercício 10: Fazer um programa que leia N números inteiros e exiba o maior e o menor entre
+// eles.
 int main()
 {
-	int numbers = 0;
-	int biggest = 0;
-	int smallest = 0;
+	int min, max = 0;
+
 	while (1)
 	{
-		printf("Type a number\n");
 		int number;
+		printf("Type a number:\n");
 		scanf("%d", &number);
 
-		if (number > biggest)
+		if (number > max)
 		{
-			biggest = number;
+			max = number;
+		}
+		if (number < min)
+		{
+			min = number;
 		}
 
-		if (number < smallest)
-		{
-			smallest = number;
-		}
-
-		numbers++;
-
-		int signal;
-		printf("Do you wish to continue? 1 for yes 0 for no\n");
-		scanf("%d", &signal);
-
-		if (signal == 0)
+		char option;
+		printf("Do you wish to continue? y/n");
+		scanf(" %c", &option);
+		if (option != 'y')
 		{
 			break;
 		}
 	}
 
-	printf("biggest = %d, smallest = %d", biggest, smallest);
+	printf("min = %d, max = %d", min, max);
 }

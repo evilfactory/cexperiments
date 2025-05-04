@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// Exercício 3: Fazer um programa C para ler 3 númerosinteiros e imprimi-los em ordem crescente.
 int main()
 {
 	int n1, n2, n3;
