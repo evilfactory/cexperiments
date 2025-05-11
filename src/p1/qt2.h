@@ -21,6 +21,18 @@ int main()
 	printf("max:\n");
 	scanf("%d", &max);
 
+	if (min > max)
+	{
+		printf("max precisa ser maior que min");
+		return 0;
+	}
+
+	if (min < 0 || max < 0)
+	{
+		printf("min ou max fora do intervalo permitido");
+		return 0;
+	}
+
 	for (int i = min; i <= max; i++)
 	{
 		if (is_perfect(i) && i % 2 == 0)
