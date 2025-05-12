@@ -73,8 +73,8 @@ int main() {
         {
             n100 -= 1;
             n50 += 1;
-            n20 += 1;
-            n10 += 2;
+            n20 += 2;
+            n10 += 0;
             n5 += 1;
             n2 += 3;
             remainder = 0;
@@ -84,10 +84,12 @@ int main() {
     if (remainder != 0)
     {
         printf("Sobrou R$%d que nao pode ser representado com as notas disponiveis\n", remainder);
+        return 0;
     }
     if (n100 * 100 + n50 * 50 + n20 * 20 + n10 * 10 + n5 * 5 + n2 * 2 != value)
     {
         printf("Error in %d. %d != %d\n", value, n100 * 100 + n50 * 50 + n20 * 20 + n10 * 10 + n5 * 5 + n2 * 2, value);
+        return 0;
     }
 
 

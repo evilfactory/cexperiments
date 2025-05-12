@@ -18,13 +18,13 @@ int main() {
 
 	if (A != B && B != C && C != A)
 	{
-		printf("ERRO: As cartas são todas diferentes");
+		printf("ERRO: As cartas sao todas diferentes");
 		return 0;
 	}
 
 	if (A == B && B == C)
 	{
-		printf("ERRO: as cartas são todas iguais");
+		printf("ERRO: as cartas sao todas iguais");
 		return 0;
 	}
 
@@ -35,6 +35,10 @@ int main() {
 	if (A == C)
 	{
 		printf("A carta 4 e: %d", B);
+	}
+	if (B == C)
+	{
+		printf("A carta 4 e: %d", A);
 	}
 
 	return 0;
