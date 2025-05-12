@@ -9,7 +9,7 @@ int main() {
 
     int remainder;
 
-    int n100, n50, n20, n10, n5, n2;
+    int n100 = 0, n50 = 0, n20 = 0, n10 = 0, n5 = 0, n2 = 0;
 
     if (value < 0)
     {
@@ -18,6 +18,12 @@ int main() {
     }
 
     remainder = value;
+
+    if (remainder > 5 && remainder % 2 == 1)
+    {
+        remainder -= 5;
+        n5 += 1;
+    }
 
     n100 = remainder / 100;
     remainder %= 100;
@@ -31,55 +37,11 @@ int main() {
     n10 = remainder / 10;
     remainder %= 10;
 
-    n5 = remainder / 5;
-    remainder %= 5;
+    //n5 = remainder / 5;
+    //remainder %= 5;
 
     n2 = remainder / 2;
     remainder %= 2;
-
-    if (remainder == 1)
-    {
-        if (n5 >= 1)
-        {
-            n5 -= 1;
-            n2 += 3;
-            remainder = 0;
-        }
-        else if (n10 >= 1)
-        {
-            n10 -= 1;
-            n5 += 1;
-            n2 += 3;
-            remainder = 0;
-        }
-        else if (n20 >= 1)
-        {
-            n20 -= 1;
-            n10 += 1;
-            n5 += 1;
-            n2 += 3;
-            remainder = 0;
-        }
-        else if (n50 >= 1)
-        {
-            n50 -= 1;
-            n20 += 2;
-            n10 += 0;
-            n5 += 1;
-            n2 += 3;
-            remainder = 0;
-        }
-        else if (n100 >= 1)
-        {
-            n100 -= 1;
-            n50 += 1;
-            n20 += 2;
-            n10 += 0;
-            n5 += 1;
-            n2 += 3;
-            remainder = 0;
-        }
-    }
 
     if (remainder != 0)
     {
@@ -91,7 +53,6 @@ int main() {
         printf("Error in %d. %d != %d\n", value, n100 * 100 + n50 * 50 + n20 * 20 + n10 * 10 + n5 * 5 + n2 * 2, value);
         return 0;
     }
-
 
     printf("\nNotas necessarias para %d:\n", value);
     printf("R$100: %d\n", n100);
